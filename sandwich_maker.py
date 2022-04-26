@@ -6,7 +6,7 @@ class Nature(Enum):
     MEAT = "meat"
     DAIRY = "dairy"
     VEGETABLE = "vegetable"
-
+    SAUCE = "sauce"
 
 class Aliment:
     def __init__(self, nature, name):
@@ -37,8 +37,11 @@ class Ham(Aliment):
 class Lettuce(Aliment):
     def __init__(self):
         super().__init__(Nature.VEGETABLE, "Lettuce")
-
-
+        
+class Mayonnaise(Aliment):
+  def __init__(self):
+    super().__init__(Nature.SAUCE, 'Mayonnaise')
+    
 class SandwichMaker:
     def __init__(self):
         self.__sandwich = []
